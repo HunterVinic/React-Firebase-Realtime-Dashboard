@@ -1,70 +1,136 @@
-# Getting Started with Create React App
+# 🔥 React Firebase Realtime Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React.js application that connects to Firebase Realtime Database and displays live sensor/customer data in a table.
 
-## Available Scripts
+This project demonstrates:
+- Real-time data listening
+- Firebase Realtime Database integration
+- Bootstrap styling
+- Basic CRUD structure setup
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React (Create React App)
+- Firebase Realtime Database
+- Bootstrap
+- JavaScript (ES6)
+- Jest (Testing Library)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📂 Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+.
+├── src/
+│   ├── App.js
+│   ├── index.js
+│   ├── index.css
+│   ├── firebaseConfig.js
+│   ├── reportWebVitals.js
+│   ├── components/
+│   │   ├── realtimeDatabase.js
+│   │   └── Crud.js
+│   └── App.test.js
+├── package.json
+├── public/
+└── README.md
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🔥 Firebase Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project connects to Firebase Realtime Database.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Make sure you:
 
-### `npm run eject`
+1. Create a Firebase project
+2. Enable Realtime Database
+3. Replace firebaseConfig values in:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+src/firebaseConfig.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📡 How Realtime Data Works
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Connects to Firebase using initializeApp()
+- Uses ref() to point to the "Customer" node
+- Uses onValue() to listen for live updates
+- Updates state automatically when data changes
+- Renders table dynamically
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🛠 Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Make sure Node.js is installed.
 
-### Code Splitting
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## ▶️ Run Development Server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+npm start
 
-### Making a Progressive Web App
+Open browser:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+http://localhost:3000
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🧪 Run Tests
 
-### Deployment
+npm test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📊 Example Data Structure (Firebase)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Customer
+  ├── ID1
+  │    ├── HUMIDITY: 50
+  │    ├── MotionSensor: ON
+  │    ├── TEMPERATURE: 30
+  ├── ID2
+       ├── HUMIDITY: 60
+       ├── MotionSensor: OFF
+       ├── TEMPERATURE: 28
+
+---
+
+## 📌 Features
+
+- Real-time database updates
+- Live table rendering
+- Bootstrap styling
+- Firebase integration
+- Basic CRUD component structure
+
+---
+
+## ⚠️ Notes
+
+- Make sure Firebase rules allow read access.
+- API keys shown in frontend config are safe for client apps (security is controlled by Firebase rules).
+- Ensure correct imports from "firebase/database".
+
+---
+
+## 🔐 License
+
+Copyright (c) 2026 Your Name
+
+All rights reserved.
+
+This project and its source code may not be copied, modified,
+distributed, or used without explicit permission from the author.
+
+---
+
+## 👨‍💻 Author
+Copyright (c) 2026 Sheshehang Limbu (HunterVinic)
+All rights reserved.
+This project and its source code may not be copied, modified, distributed, or used without explicit permission from the author.
